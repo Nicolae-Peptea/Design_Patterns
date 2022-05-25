@@ -11,6 +11,10 @@ namespace DesignPattern
 
             CreatureModifier root = new CreatureModifier(goblin);
 
+            NoBonusesModifier noBonuses = new NoBonusesModifier(goblin);
+
+            root.Add(noBonuses);
+
             Console.WriteLine("Let's double the goblin's attack");
             DoubleAttackModifier doubleAttackModifier = new DoubleAttackModifier(goblin);
             root.Add(doubleAttackModifier);

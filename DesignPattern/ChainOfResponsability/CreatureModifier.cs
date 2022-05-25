@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesignPattern
+namespace DesignPattern.ChainOfResponsability
 {
-    internal class CreatureModifier
+    internal class CreatureModifier : ICreatureModifier
     {
         protected Creature creature;
         protected CreatureModifier next; // linked list

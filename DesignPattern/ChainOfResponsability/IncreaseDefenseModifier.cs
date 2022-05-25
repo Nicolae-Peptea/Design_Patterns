@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesignPattern
+namespace DesignPattern.ChainOfResponsability
 {
     internal class IncreaseDefenseModifier : CreatureModifier
     {
