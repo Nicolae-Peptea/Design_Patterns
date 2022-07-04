@@ -1,0 +1,18 @@
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text;
+
+namespace DesignPattern.SingleResponsabilityPrinciple
+{
+    internal class Persistance
+    {
+        public void SaveToFile(Journal journal, string fileName, bool overwrite = false)
+        {
+            if (overwrite || File.Exists(fileName))
+            {
+                File.WriteAllText(fileName, journal.ToString());
+            }
+        }
+    }
+}
