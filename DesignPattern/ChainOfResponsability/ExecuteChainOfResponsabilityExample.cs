@@ -1,31 +1,34 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
-namespace DesignPattern
+namespace DesignPattern.ChainOfResponsability
 {
-    internal class Program
+    internal class ExecuteChainOfResponsabilityExample
     {
-        static void Main(string[] args)
+        public void ExecuteCode()
         {
+            //Chain Of responsability
+
             Creature goblin = new Creature("Goblin", 2, 2);
             Console.WriteLine(goblin);
 
-            CreatureModifier root = new CreatureModifier(goblin);
+            //NoBonusesModifier noBonuses = new NoBonusesModifier(goblin);
 
-            NoBonusesModifier noBonuses = new NoBonusesModifier(goblin);
-
-            root.Add(noBonuses);
+            //root.Add(noBonuses);
 
             Console.WriteLine("Let's double the goblin's attack");
             DoubleAttackModifier doubleAttackModifier = new DoubleAttackModifier(goblin);
-            root.Add(doubleAttackModifier);
+            //root.Add(doubleAttackModifier);
 
             Console.WriteLine("Let's increase the goblin's defense");
             IncreaseDefenseModifier increaseDefenseModifier = new IncreaseDefenseModifier(goblin);
-            root.Add(increaseDefenseModifier);
+            doubleAttackModifier.Add(increaseDefenseModifier);
 
-            root.Handle();
+            doubleAttackModifier.Handle();
 
             Console.WriteLine(goblin);
+
         }
     }
 }

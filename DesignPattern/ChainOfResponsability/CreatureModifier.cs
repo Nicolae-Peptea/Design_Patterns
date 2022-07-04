@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DesignPattern.ChainOfResponsability
 {
-    internal class CreatureModifier : ICreatureModifier
+    internal abstract class CreatureModifier : ICreatureModifier
     {
         protected Creature creature;
         protected CreatureModifier next; // linked list
