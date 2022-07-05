@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DesignPattern.ChainOfResponsability
+﻿namespace DesignPattern.ChainOfResponsability
 {
     internal class NoBonusesModifier : CreatureModifier
     {

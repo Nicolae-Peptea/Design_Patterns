@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DesignPattern.BrokerChain
 {
@@ -20,12 +18,12 @@ namespace DesignPattern.BrokerChain
         }
 
         public int Attack
-        { 
+        {
             get
             {
                 var query = new Query(name, Query.Argument.Attack, attack);
                 game.PerformQuery(this, query);
-                return query.Value; 
+                return query.Value;
             }
         }
     }

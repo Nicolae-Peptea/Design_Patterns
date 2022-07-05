@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace DesignPattern.ChainOfResponsability
 {
     internal class DoubleAttackModifier : CreatureModifier
     {
         public DoubleAttackModifier(Creature creature)
-            :base(creature)
-        {        
+            : base(creature)
+        {
         }
 
         public override void Handle()

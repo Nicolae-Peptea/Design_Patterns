@@ -1,6 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using DesignPattern.Specs.OpenClosedPrinciple;
+using System;
 
 namespace DesignPattern.OpenClosedPrinciple
 {
@@ -10,7 +9,7 @@ namespace DesignPattern.OpenClosedPrinciple
         {
             var apple = new Product("apple", Color.Green, Size.Small);
             var tree = new Product("tree", Color.Green, Size.Large);
-            var house = new Product("tree", Color.Blue, Size.Large);
+            var house = new Product("house", Color.Blue, Size.Large);
 
             Product[] products = { apple, tree, house };
 
@@ -23,8 +22,27 @@ namespace DesignPattern.OpenClosedPrinciple
                 Console.WriteLine($" - {product.Name} is Green");
             }
 
+            Console.WriteLine("Green product (new):");
+
+            var betterFilter = new BetterFilter();
+            var filterByGreenColor = new ColorSpecification(Color.Green);
+
+            foreach (var product in betterFilter.Filter(products, filterByGreenColor))
+            {
+                Console.WriteLine($" - {product.Name} is Green");
+            }
+
+            Console.WriteLine("Large blue items:");
+            var filterByBlueColor = new ColorSpecification(Color.Blue);
+            var filterByLargeSize = new SizeSpecification(Size.Large);
+            var andSpecifiaction = new AndSpecification<Product>(filterByLargeSize, filterByBlueColor);
+
+            foreach (var product in betterFilter.Filter(products, andSpecifiaction))
+            {
+                Console.WriteLine($" - {product.Name} is blue and large");
+            }
         }
-        
+
 
     }
 }

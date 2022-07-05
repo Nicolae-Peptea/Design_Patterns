@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DesignPattern.OpenClosedPrinciple
+﻿namespace DesignPattern.OpenClosedPrinciple
 {
     public enum Color
     {
