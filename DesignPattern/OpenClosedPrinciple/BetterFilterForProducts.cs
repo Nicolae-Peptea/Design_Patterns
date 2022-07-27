@@ -3,7 +3,7 @@ using System.Collections.Generic;
 
 namespace DesignPattern.OpenClosedPrinciple
 {
-    internal class BetterFilter : IFilter<Product>
+    internal class BetterFilterForProducts : IFilter<Product>
     {
         public IEnumerable<Product> Filter(IEnumerable<Product> input, ISpecification<Product> specification)
         {

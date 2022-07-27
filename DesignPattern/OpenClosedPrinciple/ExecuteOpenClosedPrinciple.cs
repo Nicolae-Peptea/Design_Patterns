@@ -24,7 +24,7 @@ namespace DesignPattern.OpenClosedPrinciple
 
             Console.WriteLine("Green product (new):");
 
-            var betterFilter = new BetterFilter();
+            var betterFilter = new BetterFilterForProducts();
             var filterByGreenColor = new ColorSpecification(Color.Green);
 
             foreach (var product in betterFilter.Filter(products, filterByGreenColor))
