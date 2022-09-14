@@ -8,7 +8,7 @@ namespace DesignPattern.FactoryPattern
     {
         public void ExecuteCode()
         {
-            var point = Point.NewPolarPoint(1.0, Math.PI / 2);
+            var point = PointFactory.NewPolarPoint(1.0, Math.PI / 2);
             Console.WriteLine(point.ToString());
 
         }
