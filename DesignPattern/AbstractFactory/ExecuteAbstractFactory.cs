@@ -9,7 +9,7 @@ namespace DesignPattern.AbstractFactory
         public void Execute()
         {
             var machine = new HotDrinkMachine();
-            var drink = machine.MakeDrink(HotDrinkMachine.AvailableDrink.Tea, 50);
+            var drink = machine.MakeDrink();
             drink.Consume();
         }
     }
