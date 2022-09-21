@@ -3,7 +3,7 @@ namespace DesignPattern.DependencyInversionPrinciple
 {
     internal class ExecuteDependecyInversion
     {
-       public void ExecuteCode()
+        public void ExecuteCode()
         {
             Person parent = new Person { Name = "John" };
             Person firstChild = new Person { Name = "Chris" };

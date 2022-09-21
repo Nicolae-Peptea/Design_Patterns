@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DesignPattern.Exercises.Factory
+﻿namespace DesignPattern.Exercises.Factory
 {
     internal class PersonFactory : IPersonFactory
     {

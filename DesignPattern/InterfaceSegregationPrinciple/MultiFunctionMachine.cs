@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace DesignPattern.InterfaceSegregationPrinciple
+﻿namespace DesignPattern.InterfaceSegregationPrinciple
 {
     internal class MultiFunctionMachine : IMultiFunctionDevice
     {
