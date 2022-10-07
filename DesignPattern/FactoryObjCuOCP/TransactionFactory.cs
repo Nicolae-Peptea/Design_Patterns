@@ -6,7 +6,6 @@ namespace DesignPattern.FactoryObjCuOCP
 {
     internal class TransactionFactory : ITransactionFactory
     {
-
         public List<Type> Transactions { get; private set; }
 
         public TransactionFactory(List<Type> transactions)
