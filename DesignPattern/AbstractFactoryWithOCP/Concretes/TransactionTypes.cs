@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesignPattern.FactoryObjCuOCP_V3.Concretes
+namespace DesignPattern.AbstractFactoryWithOCP.Concretes
 {
     internal enum TransactionTypes
     {

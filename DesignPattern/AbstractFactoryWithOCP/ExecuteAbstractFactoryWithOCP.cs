@@ -1,13 +1,13 @@
-﻿using DesignPattern.FactoryObjCuOCP_V3.Concretes;
-using DesignPattern.FactoryObjCuOCP_V3.Factories;
-using DesignPattern.FactoryObjCuOCP_V3.Interfaces;
+﻿using DesignPattern.AbstractFactoryWithOCP.Concretes;
+using DesignPattern.AbstractFactoryWithOCP.Factories;
+using DesignPattern.AbstractFactoryWithOCP.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesignPattern.FactoryObjCuOCP_V3
+namespace DesignPattern.AbstractFactoryWithOCP
 {
-    internal class ExecuteFactoryObjCuOCP_V3
+    internal class ExecuteAbstractFactoryWithOCP
     {
         public void Execute()
         {
@@ -22,8 +22,8 @@ namespace DesignPattern.FactoryObjCuOCP_V3
 
             TransactionsFactory transactionsFactory = new TransactionsFactory(transactionFactories);
 
-            var x = transactionsFactory.GetHandler(TransactionTypes.Deposit);
-            var transactionObject = x.Create();
+            IFactory<ITransaction> transactionHandler = transactionsFactory.GetHandler(TransactionTypes.Deposit);
+            ITransaction transactionObject = transactionHandler.Create();
             transactionObject.Complete();
         }
     }

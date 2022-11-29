@@ -1,4 +1,5 @@
-﻿using DesignPattern.AbstractFactory;
+﻿using DesignPattern.AbstractFactoryWithOCP;
+using System;
 
 namespace DesignPattern
 {
@@ -6,7 +7,12 @@ namespace DesignPattern
     {
         static void Main(string[] args)
         {
-            var test = new ExecuteAbstractFactory();
+            //var test = new ExecuteFactory();
+            //test.ExecuteCode();
+            //var test = new ExecuteFactoryObjWithOCP_V2();
+            //test.ExecuteCode();
+
+            var test = new ExecuteAbstractFactoryWithOCP();
             test.Execute();
         }
     }

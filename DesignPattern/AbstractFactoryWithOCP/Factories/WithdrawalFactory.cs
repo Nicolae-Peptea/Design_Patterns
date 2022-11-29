@@ -1,10 +1,10 @@
-﻿using DesignPattern.FactoryObjCuOCP_V3.Concretes;
-using DesignPattern.FactoryObjCuOCP_V3.Interfaces;
+﻿using DesignPattern.AbstractFactoryWithOCP.Concretes;
+using DesignPattern.AbstractFactoryWithOCP.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesignPattern.FactoryObjCuOCP_V3.Factories
+namespace DesignPattern.AbstractFactoryWithOCP.Factories
 {
     internal class WithdrawalFactory : IFactory<ITransaction>
     {
