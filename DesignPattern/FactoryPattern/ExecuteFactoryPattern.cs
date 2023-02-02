@@ -10,6 +10,5 @@ namespace DesignPattern.FactoryPattern
             Console.WriteLine(point.ToString());
 
         }
-
     }
 }

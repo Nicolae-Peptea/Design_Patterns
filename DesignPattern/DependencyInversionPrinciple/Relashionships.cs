@@ -20,7 +20,7 @@ namespace DesignPattern.DependencyInversionPrinciple
         public IEnumerable<Person> FindAllChildrenOf(string name)
         {
             return Relations
-                .Where(x => x.Item1.Name == "John" &&
+                .Where(x => x.Item1.Name == name &&
                         x.Item2 == Relationship.Parent)
                 .Select(x => x.Item3);
         }

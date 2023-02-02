@@ -42,7 +42,5 @@ namespace DesignPattern.OpenClosedPrinciple
                 Console.WriteLine($" - {product.Name} is blue and large");
             }
         }
-
-
     }
 }

@@ -1,4 +1,4 @@
-﻿using DesignPattern.AbstractFactoryWithOCP;
+﻿using DesignPattern.AbstractFactoryVisualStudio;
 using System;
 
 namespace DesignPattern
@@ -12,8 +12,9 @@ namespace DesignPattern
             //var test = new ExecuteFactoryObjWithOCP_V2();
             //test.ExecuteCode();
 
-            var test = new ExecuteAbstractFactoryWithOCP();
-            test.Execute();
+            //var test = new ExecuteAbstractFactoryWithOCP();
+            //test.Execute();
+            ExecuteAbstractFactoryVisualStudio.Execute();
         }
     }
 }
