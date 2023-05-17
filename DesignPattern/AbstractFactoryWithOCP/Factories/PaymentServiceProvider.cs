@@ -7,11 +7,11 @@ using System.Text;
 
 namespace DesignPattern.AbstractFactoryWithOCP.Factories
 {
-    internal class TransactionsFactory
+    internal class PaymentServiceProvider
     {
         public List<Tuple<int, IFactory<ITransaction>>> TransactionHandlers { get; private set; }
 
-        public TransactionsFactory(List<Tuple<int, IFactory<ITransaction>>> handlers)
+        public PaymentServiceProvider(List<Tuple<int, IFactory<ITransaction>>> handlers)
         {            
             TransactionHandlers = handlers;
         }

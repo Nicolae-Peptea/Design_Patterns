@@ -20,7 +20,7 @@ namespace DesignPattern.AbstractFactoryWithOCP
                 Tuple.Create((int)TransactionTypes.Withdrawal, withdrawalFactory)
             };
 
-            TransactionsFactory transactionsFactory = new TransactionsFactory(transactionFactories);
+            PaymentServiceProvider transactionsFactory = new PaymentServiceProvider(transactionFactories);
 
             IFactory<ITransaction> transactionHandler = transactionsFactory.GetHandler(TransactionTypes.Deposit);
             ITransaction transactionObject = transactionHandler.Create();
