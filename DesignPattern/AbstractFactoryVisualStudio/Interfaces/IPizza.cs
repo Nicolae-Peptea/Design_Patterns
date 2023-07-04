@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DesignPattern.AbstractFactoryVisualStudio.Interfaces
 {
-    internal interface IPizza
+    public interface IPizza
     {
         IList<string> Toppings { get; }
         string Seasonings { get; set; }

@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace DesignPattern.FactoryPattern
 {
     internal class Point
