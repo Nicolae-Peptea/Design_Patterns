@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DesignPattern.CommandPattern.CommandConcretes;
+using DesignPattern.CommandPattern.ConcreteObjects;
 
-namespace DesignPattern.CommandPattern
+namespace DesignPattern.CommandPattern.Clients
 {
     public static class ExecuteRemoteControlWithUndo
     {
@@ -27,7 +29,7 @@ namespace DesignPattern.CommandPattern
             remoteControl.OnButtonWasPressed(0);
 
             Console.WriteLine(remoteControl.ToString());
-            
+
             remoteControl.UndoButtonWasPressed();
         }
     }

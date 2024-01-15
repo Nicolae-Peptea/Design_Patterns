@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesignPattern.CommandPattern
+namespace DesignPattern.CommandPattern.Receivers
 {
     public class Light
     {
@@ -21,6 +21,6 @@ namespace DesignPattern.CommandPattern
         public void Off()
         {
             Console.WriteLine($"Light from {Room} is off");
-        }   
+        }
     }
 }

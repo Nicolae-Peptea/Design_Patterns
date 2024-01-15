@@ -1,21 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DesignPattern.CommandPattern.CommandInterface;
+using DesignPattern.CommandPattern.Receivers;
 
-namespace DesignPattern.CommandPattern
+namespace DesignPattern.CommandPattern.CommandConcretes
 {
-    internal class GarageDoorCloseCommand : ICommand
+    internal class GarageDoorOpenCommand : ICommand
     {
         private readonly GarageDoor _garageDoor;
 
-        public GarageDoorCloseCommand(GarageDoor garageDoor)
+        public GarageDoorOpenCommand(GarageDoor garageDoor)
         {
             _garageDoor = garageDoor;
         }
 
         public void Execute()
         {
-            _garageDoor.Down();
+            _garageDoor.Up();
         }
 
         public void Undo()

@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DesignPattern.CommandPattern.CommandInterface;
 
-namespace DesignPattern.CommandPattern
+namespace DesignPattern.CommandPattern.CommandConcretes
 {
     public class NoCommand : ICommand
     {

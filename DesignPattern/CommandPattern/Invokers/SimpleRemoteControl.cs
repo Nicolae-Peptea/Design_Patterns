@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DesignPattern.CommandPattern.CommandInterface;
 
-namespace DesignPattern.CommandPattern
+namespace DesignPattern.CommandPattern.Invokers
 {
-    public class SimpleRemoteControl 
+    public class SimpleRemoteControl
     {
-        private const int  SLOTS = 7;
+        private const int SLOTS = 7;
 
         private readonly ICommand[] _onCommands;
         private readonly ICommand[] _offCommands;

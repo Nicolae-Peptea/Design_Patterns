@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DesignPattern.CommandPattern.CommandInterface;
+using DesignPattern.CommandPattern.Receivers;
 
-namespace DesignPattern.CommandPattern
+namespace DesignPattern.CommandPattern.CommandConcretes
 {
     public class LightOnCommand : ICommand
     {
@@ -15,7 +17,7 @@ namespace DesignPattern.CommandPattern
 
         public void Execute()
         {
-           _light.On();
+            _light.On();
         }
 
         public void Undo()

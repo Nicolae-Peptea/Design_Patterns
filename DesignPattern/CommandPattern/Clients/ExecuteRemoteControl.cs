@@ -1,8 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using DesignPattern.CommandPattern.CommandConcretes;
+using DesignPattern.CommandPattern.Invokers;
+using DesignPattern.CommandPattern.Receivers;
 
-namespace DesignPattern.CommandPattern
+namespace DesignPattern.CommandPattern.Clients
 {
     public static class ExecuteRemoteControl
     {
