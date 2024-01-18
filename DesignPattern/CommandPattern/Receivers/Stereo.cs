@@ -35,7 +35,7 @@ namespace DesignPattern.CommandPattern.Receivers
         }
         public void SetVolume()
         {
-            Console.WriteLine($"Stereo from {Room} is setting Volume on");
+            Console.WriteLine($"Stereo from {Room} is setting Volume");
         }
 
     }

@@ -4,25 +4,25 @@ using System.Text;
 using DesignPattern.CommandPattern.CommandInterface;
 using DesignPattern.CommandPattern.Receivers;
 
-namespace DesignPattern.CommandPattern.CommandConcretes
+namespace DesignPattern.CommandPattern.CommandConcretes.LightCommands
 {
-    public class LightOnCommand : ICommand
+    public class LightOffCommand : ICommand
     {
-        private Light _light;
+        private readonly Light _light;
 
-        public LightOnCommand(Light light)
+        public LightOffCommand(Light light)
         {
             _light = light;
         }
 
         public void Execute()
         {
-            _light.On();
+            _light.Off();
         }
 
         public void Undo()
         {
-            _light.Off();
+            _light.On();
         }
     }
 }

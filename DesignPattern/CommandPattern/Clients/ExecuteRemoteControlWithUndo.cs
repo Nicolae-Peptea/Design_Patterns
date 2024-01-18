@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using DesignPattern.CommandPattern.CommandConcretes;
-using DesignPattern.CommandPattern.ConcreteObjects;
+using DesignPattern.CommandPattern.CommandConcretes.LightCommands;
+using DesignPattern.CommandPattern.Invokers;
+using DesignPattern.CommandPattern.Receivers;
 
 namespace DesignPattern.CommandPattern.Clients
 {
