@@ -4,25 +4,25 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesignPattern.CommandPattern.CommandConcretes
+namespace DesignPattern.CommandPattern.CommandConcretes.TvCommands
 {
-    public class StereoOnCommand : ICommand
+    public class TvOnCommand : ICommand
     {
-        private readonly Stereo _stereo;
+        public Tv _tv;
 
-        public StereoOnCommand(Stereo stereo)
+        public TvOnCommand(Tv tv)
         {
-            _stereo = stereo;
+            _tv = tv;
         }
 
         public void Execute()
         {
-            _stereo.On();
+            _tv.On();
         }
 
         public void Undo()
         {
-            _stereo.Off();
+            _tv.Off();
         }
     }
 }

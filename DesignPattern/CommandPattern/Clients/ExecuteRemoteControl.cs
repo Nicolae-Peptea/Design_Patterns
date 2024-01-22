@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using DesignPattern.CommandPattern.CommandConcretes;
+using DesignPattern.CommandPattern.CommandConcretes.GarageCommands;
 using DesignPattern.CommandPattern.CommandConcretes.LightCommands;
+using DesignPattern.CommandPattern.CommandConcretes.StereoCommands;
 using DesignPattern.CommandPattern.Invokers;
 using DesignPattern.CommandPattern.Receivers;
 

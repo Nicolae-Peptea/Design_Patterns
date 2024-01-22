@@ -4,25 +4,25 @@ using System.Text;
 using DesignPattern.CommandPattern.CommandInterface;
 using DesignPattern.CommandPattern.Receivers;
 
-namespace DesignPattern.CommandPattern.CommandConcretes
+namespace DesignPattern.CommandPattern.CommandConcretes.GarageCommands
 {
-    internal class GarageDoorOpenCommand : ICommand
+    internal class GarageDoorCloseCommand : ICommand
     {
         private readonly GarageDoor _garageDoor;
 
-        public GarageDoorOpenCommand(GarageDoor garageDoor)
+        public GarageDoorCloseCommand(GarageDoor garageDoor)
         {
             _garageDoor = garageDoor;
         }
 
         public void Execute()
         {
-            _garageDoor.Up();
+            _garageDoor.Down();
         }
 
         public void Undo()
         {
-            throw new NotImplementedException();
+            _garageDoor.Up();
         }
     }
 }

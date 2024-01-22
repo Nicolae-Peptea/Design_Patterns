@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesignPattern.CommandPattern.CommandConcretes
+namespace DesignPattern.CommandPattern.CommandConcretes.TvCommands
 {
     public class TvOffCommand : ICommand
     {
@@ -17,12 +17,12 @@ namespace DesignPattern.CommandPattern.CommandConcretes
 
         public void Execute()
         {
-            _tv.On();
+            _tv.Off();
         }
 
         public void Undo()
         {
-            _tv.Off();
+            _tv.On();
         }
     }
 }

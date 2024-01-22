@@ -1,6 +1,7 @@
 ﻿using DesignPattern.CommandPattern.CommandInterface;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace DesignPattern.CommandPattern.CommandConcretes
@@ -24,7 +25,10 @@ namespace DesignPattern.CommandPattern.CommandConcretes
 
         public void Undo()
         {
-            throw new NotImplementedException();
+            for (int i = _commands.Length - 1; i >= 0; i--)
+            {
+                _commands[i].Undo();
+            }
         }
     }
 }

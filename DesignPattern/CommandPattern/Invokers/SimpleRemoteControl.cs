@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using DesignPattern.CommandPattern.CommandConcretes;
 using DesignPattern.CommandPattern.CommandInterface;
@@ -12,7 +13,7 @@ namespace DesignPattern.CommandPattern.Invokers
 
         private readonly ICommand[] _onCommands;
         private readonly ICommand[] _offCommands;
-        private ICommand _undoCommand;
+        private List<ICommand> _undoCommands = new List<ICommand>();
 
         public SimpleRemoteControl()
         {
@@ -26,7 +27,7 @@ namespace DesignPattern.CommandPattern.Invokers
                 _offCommands[i] = noCommand;
             }
 
-            _undoCommand = noCommand;
+            _undoCommands.Add(noCommand);
         }
 
         public void SetCommand(int slot, ICommand onCommand, ICommand offCommand)
@@ -37,19 +38,30 @@ namespace DesignPattern.CommandPattern.Invokers
 
         public void OnButtonWasPressed(int slot)
         {
-            _onCommands[slot].Execute();
-            _undoCommand = _onCommands[slot];
+            ICommand command = _onCommands[slot];
+            command.Execute();
+            _undoCommands.Add(command);
         }
 
         public void OffButtonWasPressed(int slot)
         {
-            _offCommands[slot].Execute();
-            _undoCommand = _offCommands[slot];
+            ICommand command = _offCommands[slot];
+            command.Execute();
+            _undoCommands.Add(command);
         }
 
         public void UndoButtonWasPressed()
         {
-            _undoCommand.Undo();
+            int undoCommandListLength = _undoCommands.Count - 1;
+
+            if (undoCommandListLength > 0)
+            {
+                return;
+            }
+
+            ICommand undoCommand = _undoCommands.ElementAt(undoCommandListLength);
+            undoCommand.Undo();
+            _undoCommands.RemoveAt(undoCommandListLength);
         }
 
         public override string ToString()
@@ -61,7 +73,11 @@ namespace DesignPattern.CommandPattern.Invokers
             {
                 stringBuilder.AppendLine($"[slot {i}]  {_onCommands[i].GetType().Name}  {_offCommands[i].GetType().Name}");
             }
-            stringBuilder.AppendLine($"[undo] {_undoCommand.GetType().Name}");
+
+            for (int i = 0; i < _undoCommands.Count - 1; i++)
+            {
+                stringBuilder.AppendLine($"[undo command] {_undoCommands[i].GetType().Name}");
+            }
 
             return stringBuilder.ToString();
         }

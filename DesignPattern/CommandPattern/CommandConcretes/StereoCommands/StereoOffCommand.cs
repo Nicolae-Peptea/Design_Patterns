@@ -4,7 +4,7 @@ using System.Text;
 using DesignPattern.CommandPattern.CommandInterface;
 using DesignPattern.CommandPattern.Receivers;
 
-namespace DesignPattern.CommandPattern.CommandConcretes
+namespace DesignPattern.CommandPattern.CommandConcretes.StereoCommands
 {
     public class StereoOffCommand : ICommand
     {
@@ -22,7 +22,7 @@ namespace DesignPattern.CommandPattern.CommandConcretes
 
         public void Undo()
         {
-            throw new NotImplementedException();
+            _stereo.On();
         }
     }
 }
