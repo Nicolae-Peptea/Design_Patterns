@@ -1,5 +1,4 @@
-﻿
-namespace DesignPattern.FiniteStateMachine
+﻿namespace DesignPattern.StatePatternUncleBob.FiniteStateMachineExample
 {
     public enum TurnstileState
     {

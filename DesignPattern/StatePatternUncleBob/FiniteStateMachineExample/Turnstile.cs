@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace DesignPattern.FiniteStateMachine
+namespace DesignPattern.StatePatternUncleBob.FiniteStateMachineExample
 {
     public class Turnstile
     {

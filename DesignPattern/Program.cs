@@ -1,4 +1,5 @@
 ﻿using DesignPattern.AbstractFactoryVisualStudio;
+using DesignPattern.Prototype;
 using DesignPattern.StrategyHeadOnDesignPatterns;
 using System;
 using System.Text;
@@ -9,8 +10,7 @@ namespace DesignPattern
     {
         static void Main(string[] args)
         {
-            var test = new StrategyPatternHeadsOnDesignPatternsSimulator();
-            test.Execute();
+            ExecutePrototypePattern.Execute();
         }
     }
 }

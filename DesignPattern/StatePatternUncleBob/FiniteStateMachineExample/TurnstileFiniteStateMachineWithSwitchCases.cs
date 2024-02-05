@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace DesignPattern.FiniteStateMachine
+namespace DesignPattern.StatePatternUncleBob.FiniteStateMachineExample
 {
     public class TurnstileFiniteStateMachineWithSwitchCases
     {
