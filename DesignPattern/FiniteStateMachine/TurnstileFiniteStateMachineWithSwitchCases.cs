@@ -4,12 +4,12 @@ using System.Text;
 
 namespace DesignPattern.FiniteStateMachine
 {
-    public class TurnstileFiniteStateMachine
+    public class TurnstileFiniteStateMachineWithSwitchCases
     {
         private TurnstileState _state;
         private readonly Turnstile _turnstile;
 
-        public TurnstileFiniteStateMachine(Turnstile turnstile)
+        public TurnstileFiniteStateMachineWithSwitchCases(Turnstile turnstile)
         {
             _turnstile = turnstile;
         }
