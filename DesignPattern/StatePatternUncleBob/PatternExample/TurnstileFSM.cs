@@ -8,6 +8,10 @@ namespace DesignPattern.StatePatternUncleBob.PatternExample
     {
         public ITurnstileState TurnstileState { get; set; }
 
+        public TurnstileFSM()
+        {
+            TurnstileState = new Locked();
+        }
         public void Coin()
         {
             TurnstileState.Coin(this);
