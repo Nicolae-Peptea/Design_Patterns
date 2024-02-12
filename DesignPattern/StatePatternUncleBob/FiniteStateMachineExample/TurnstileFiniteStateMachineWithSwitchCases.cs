@@ -4,7 +4,7 @@ using System.Text;
 
 namespace DesignPattern.StatePatternUncleBob.FiniteStateMachineExample
 {
-    public class TurnstileFiniteStateMachineWithSwitchCases
+    public abstract class TurnstileFiniteStateMachineWithSwitchCases
     {
         private TurnstileState _state;
         private readonly Turnstile _turnstile;
@@ -12,6 +12,15 @@ namespace DesignPattern.StatePatternUncleBob.FiniteStateMachineExample
         public TurnstileFiniteStateMachineWithSwitchCases(Turnstile turnstile)
         {
             _turnstile = turnstile;
+        }
+
+        public void Coin() 
+        { 
+            HandleEvent(TurnstileEvent.COIN);
+        }
+        public void Pass()
+        {
+            HandleEvent(TurnstileEvent.PASS); 
         }
 
         public void HandleEvent(TurnstileEvent turnstileEvent)
@@ -50,5 +59,10 @@ namespace DesignPattern.StatePatternUncleBob.FiniteStateMachineExample
                     break;
             }
         }
+
+        protected abstract void ThankYou();
+        protected abstract void Unlock();
+        protected abstract void Alarm();
+        protected abstract void Lock();
     }
 }
