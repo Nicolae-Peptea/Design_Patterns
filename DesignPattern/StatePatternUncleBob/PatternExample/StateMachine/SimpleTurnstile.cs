@@ -16,11 +16,6 @@ namespace DesignPattern.StatePatternUncleBob.PatternExample.StateMachine
             Console.WriteLine("Lock");
         }
 
-        public override void Pass()
-        {
-            Console.WriteLine("Pass");
-        }
-
         public override void Thanks()
         {
             Console.WriteLine("Thanks");
