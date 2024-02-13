@@ -5,10 +5,4 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Builder\**" />
-    <EmbeddedResource Remove="Builder\**" />
-    <None Remove="Builder\**" />
-  </ItemGroup>
-
 </Project>
